@@ -45,9 +45,9 @@ void gasDetected(float gasLevel){
    lcd.print("GAS:");
     lcd.print(gasLevel);
    lcd.setCursor(0,2);
-   lcd.print("FAN ON");
+   lcd.print("ALERT! EVACUATE");
    delay(1000);
-   lcd.clear();
+   
   }else{
    digitalWrite(ledPin,LOW);
     digitalWrite(buzzPin,LOW);
@@ -56,7 +56,7 @@ void gasDetected(float gasLevel){
    lcd.print("GAS:");
     lcd.print(gasLevel);
    lcd.setCursor(0,2);
-   lcd.print("FAN OFF");
+   lcd.print("NORMAL");
    delay(1000);
    lcd.clear();
   }
@@ -82,8 +82,8 @@ void exhaustFanOn(int buttonState){
    lcd.print("Button State:");
     lcd.print(buttonState);
     lcd.setCursor(0,2);
-    lcd.print("FAN ON");
+    lcd.print("ALERT!EVACUATE");
     delay(10000);
-    lcd.clear();
+    
   }
 }
